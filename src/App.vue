@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
     <Counter :multiplier="4" />
+    <Form @submission-succeeded="nextScreen" />
   </div>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import Counter from "./components/Counter.vue";
+import Form from "./components/Form.vue";
 
 export default {
   name: "app",
   components: {
     HelloWorld,
-    Counter
+    Counter,
+    Form
+  },
+  methods: {
+    nextScreen() {
+      console.log('nextScreen called in App');
+    }
   }
 };
 </script>
