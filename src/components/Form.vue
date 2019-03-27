@@ -8,23 +8,41 @@
         </legend>
         <div>
           <label>
-            <input type="checkbox" name="confirmations" value="1checked" v-model="confirmations" v-validate="{required:true,length:3}">
+            <input
+              type="checkbox"
+              name="confirmations"
+              value="1checked"
+              v-model="confirmations"
+              v-validate="{ required: true, length: 3 }"
+            />
             <span>
               check 1 please
-            </span>
-          </label><br>
+            </span> </label
+          ><br />
           <label>
-            <input type="checkbox" name="confirmations" value="2checked" v-model="confirmations" v-validate="{required:true,length:3}">
+            <input
+              type="checkbox"
+              name="confirmations"
+              value="2checked"
+              v-model="confirmations"
+              v-validate="{ required: true, length: 3 }"
+            />
             <span>
               check 2 please
-            </span>
-          </label><br>
+            </span> </label
+          ><br />
           <label>
-            <input type="checkbox" name="confirmations" value="3checked" v-model="confirmations" v-validate="{required:true,length:3}">
+            <input
+              type="checkbox"
+              name="confirmations"
+              value="3checked"
+              v-model="confirmations"
+              v-validate="{ required: true, length: 3 }"
+            />
             <span>
               check 3 please
-            </span>
-          </label><br>
+            </span> </label
+          ><br />
         </div>
       </fieldset>
     </form>
@@ -63,12 +81,12 @@ export default {
     submitForm() {
       this.say("submitForm");
       this.$validator.validate().then(valid => {
-        console.log('validate', valid);
+        console.log("validate", valid);
         if (!valid) {
           return;
         }
-        console.log('commit to store and emit submission-succeeded')
-        this.$emit('submission-succeeded');
+        console.log("commit to store and emit submission-succeeded");
+        this.$emit("submission-succeeded");
       });
     },
     nextScreen() {

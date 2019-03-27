@@ -20,7 +20,7 @@ export default {
   },
   methods: {
     nextScreen() {
-      console.log('nextScreen called in App');
+      console.log("nextScreen called in App");
     }
   }
 };

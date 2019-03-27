@@ -26,13 +26,17 @@ describe("Counter.vue", () => {
   });
 
   it("multiplier increments on click", () => {
-    const { getByText, getByTestId } = render(Counter, { props: { multiplier: 4 } });
+    const { getByText, getByTestId } = render(Counter, {
+      props: { multiplier: 4 }
+    });
     Simulate.click(getByText("Increments"));
     expect(getByTestId("count").textContent).toBe("4");
   });
 
   it("multiplier decrements on click", () => {
-    const { getByText, getByTestId } = render(Counter, { props: { multiplier: 4 } });
+    const { getByText, getByTestId } = render(Counter, {
+      props: { multiplier: 4 }
+    });
     Simulate.click(getByText("Decrements"));
     expect(getByTestId("count").textContent).toBe("-4");
   });
